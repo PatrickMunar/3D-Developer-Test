@@ -1,0 +1,209 @@
+/* Fonts */
+@font-face {
+  font-family: Main;
+  src: url("./fonts/Helvetica.otf");
+}
+@font-face {
+  font-family: DMSans;
+  src: url("./fonts/DMSans-Regular.ttf");
+}
+/* No Select */
+.noselect,
+img,
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */ /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */ /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+   supported by Chrome, Edge, Opera and Firefox */
+}
+
+input,
+textarea,
+button,
+select,
+a,
+svg,
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*::-moz-selection {
+  background-color: #eb5f28;
+  color: #fdfdfd;
+  text-shadow: none;
+}
+
+*::selection {
+  background-color: #eb5f28;
+  color: #fdfdfd;
+  text-shadow: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+  -webkit-user-select: auto;
+          user-select: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fdfdfd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #eb5f28, #eb9472);
+}
+
+/* Loading Page */
+.loadingPage {
+  position: fixed;
+  background-color: #fdfdfd;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999999999;
+  pointer-events: none;
+}
+
+/* Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #5f22d9;
+  font-size: 10px;
+  color: #878787;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* cursor: none; */
+}
+
+body {
+  background-color: #5f22d9;
+  box-sizing: border-box;
+  z-index: 100;
+  font-size: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: DMSans;
+  background-color: #eb9472;
+}
+
+.canvasOverlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* z-index: 100000000; */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.webgl {
+  position: fixed;
+  outline: none;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  /* z-index: 100000000; */
+  pointer-events: none;
+}
+
+main {
+  background-color: #fdfdfd;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 5rem 1rem rgba(0, 0, 0, 0.1647058824);
+  border-radius: 0 0 5rem 5rem;
+}
+
+/* Responsive */
+/* Max-Width 1080px */
+@media screen and (max-width: 1800px) {
+  html {
+    font-size: 8px;
+  }
+  /* Responsive Common */
+}
+@media screen and (max-width: 1800px) and (orientation: Portrait) {
+  /* Portrait */
+}
+@media screen and (max-width: 1800px) and (orientation: landscape) {
+  /* Landscape */
+}
+@media screen and (max-width: 1550px) {
+  html {
+    font-size: 7px;
+  }
+  /* Responsive Common */
+}
+@media screen and (max-width: 1550px) and (orientation: Portrait) {
+  /* Portrait */
+}
+@media screen and (max-width: 1550px) and (orientation: landscape) {
+  /* Landscape */
+}
+@media screen and (max-width: 1350px) {
+  html {
+    font-size: 6px;
+  }
+  /* Responsive Common */
+}
+@media screen and (max-width: 1350px) and (orientation: Portrait) {
+  /* Portrait */
+}
+@media screen and (max-width: 1350px) and (orientation: landscape) {
+  /* Landscape */
+}
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: 5px;
+  }
+  /* Responsive Common */
+}
+@media screen and (max-width: 1150px) and (orientation: Portrait) {
+  /* Portrait */
+}
+@media screen and (max-width: 1150px) and (orientation: landscape) {
+  /* Landscape */
+}
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 4px;
+  }
+  /* Responsive Common */
+}
+@media screen and (max-width: 950px) and (orientation: Portrait) {
+  /* Portrait */
+}
+@media screen and (max-width: 950px) and (orientation: landscape) {
+  /* Landscape */
+}
+@media screen and (max-width: 900px) {
+  /* Responsive Common */
+}
+@media screen and (max-width: 900px) and (orientation: Portrait) {
+  /* Portrait */
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  /* Landscape */
+}
+@media screen and (max-width: 700px) {
+  /* Responsive Common */
+}
+@media screen and (max-width: 700px) and (orientation: Portrait) {
+  /* Portrait */
+}
+@media screen and (max-width: 700px) and (orientation: landscape) {
+  /* Landscape */
+}/*# sourceMappingURL=index.css.map */

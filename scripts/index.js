@@ -47,6 +47,16 @@ const colors = [
   new THREE.Color(0x303030),
 ]
 
+const domColors = [
+  "#5f22d9",
+  "#ffc1cc",
+  "#87ceeb",
+  "#bab86c",
+  "#fa5f55",
+  "#f0f0f0",
+  "#303030",
+]
+
 /**
  * Main JS
  */
@@ -327,6 +337,7 @@ const main = () => {
   const colorChoiceBases = document.querySelectorAll(".colorChoiceBase")
   const colorChoiceSleeves = document.querySelectorAll(".colorChoiceSleeve")
   const colorChoiceLogos = document.querySelectorAll(".colorChoiceLogo")
+  const colorTexts = document.querySelectorAll(".colorText")
 
   for (let i = 0; i < colorChoiceCaps.length; i++) {
     if (i == choiceIndex[0]) {
@@ -474,6 +485,30 @@ const main = () => {
         gsap.to(colorChoiceLogos[i], { duration: 0.2, y: "0vw" })
       }
     })
+  }
+
+  for (let i = 0; i < colorTexts.length; i++) {
+    if (i == 0) {
+      gsap.to(colorTexts[i], {
+        duration: 0,
+        backgroundColor: domColors[choiceIndex[1]],
+      })
+    } else if (i == 1) {
+      gsap.to(colorTexts[i], {
+        duration: 0,
+        color: domColors[choiceIndex[0]],
+      })
+    } else if (i == 2) {
+      gsap.to(colorTexts[i], {
+        duration: 0,
+        color: domColors[choiceIndex[3]],
+      })
+    } else if (i == 3) {
+      gsap.to(colorTexts[i], {
+        duration: 0,
+        color: domColors[choiceIndex[2]],
+      })
+    }
   }
 
   /**

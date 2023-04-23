@@ -1,8 +1,6 @@
 // Variables
-
-$mainOrange: #eb5f28;
 $mainWhite: #fdfdfd;
-$mainGrey: #878787;
+$mainBlack: #000000;
 $mainPurple: #5f22d9;
 
 $logoFontSize: 2.5em;
@@ -10,15 +8,9 @@ $navFontSize: 1.5em;
 $bodyFontSize: 2.5rem;
 
 /* Fonts */
-
 @font-face {
   font-family: Main;
-  src: url("./fonts/Helvetica.otf");
-}
-
-@font-face {
-  font-family: DMSans;
-  src: url("./fonts/DMSans-Regular.ttf");
+  src: url("./fonts/BebasNeue.woff");
 }
 
 /* No Select */
@@ -46,36 +38,27 @@ div {
 }
 
 *::selection {
-  background-color: $mainOrange;
+  background-color: transparent;
   color: $mainWhite;
   text-shadow: none;
-}
-
-/* width */
-::-webkit-scrollbar {
-  // width: 1rem;
-  width: 0;
-  user-select: auto;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: $mainWhite;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(to top, $mainOrange, #eb9472);
 }
 
 /* Loading Page */
 .loadingPage {
   position: fixed;
-  background-color: $mainWhite;
+  background-color: $mainPurple;
   width: 100vw;
   height: 100vh;
   z-index: 9999999999;
   pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  position: absolute;
+  display: none;
 }
 
 /* Defaults */
@@ -86,38 +69,23 @@ div {
 }
 
 html {
-  background-color: $mainPurple;
   font-size: 10px;
-  color: $mainGrey;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   /* cursor: none; */
 }
 
 body {
   background-color: $mainPurple;
-  box-sizing: border-box;
   z-index: 100;
   font-size: 10px;
-  box-sizing: border-box;
-  width: 100%;
-  overflow-x: hidden;
-  font-family: DMSans;
-  background-color: #eb9472;
-}
-
-.canvasOverlay {
-  position: fixed;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  /* z-index: 100000000; */
-  z-index: 0;
-  pointer-events: none;
+  overflow-x: hidden;
+  font-family: Main;
+  color: $mainBlack;
 }
 
 .webgl {
@@ -126,16 +94,8 @@ body {
   box-sizing: border-box;
   width: 100vw;
   height: 100vh;
+  z-index: 10;
   /* z-index: 100000000; */
-  pointer-events: none;
-}
-
-main {
-  background-color: $mainWhite;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 0 5rem 1rem #0000002a;
-  border-radius: 0 0 5rem 5rem;
 }
 
 /* Responsive */
@@ -244,4 +204,119 @@ main {
   }
 
   /* Responsive Common */
+}
+
+// Back Section
+.backSection {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  pointer-events: none;
+  padding: 2vw;
+  color: #ffffff;
+}
+
+.backgroundRow {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 50vh;
+}
+
+// Front Section
+.frontSection {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.UISection {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 3vw;
+}
+
+main.configuratorUI {
+  width: 30vw;
+  background-color: $mainWhite;
+  border-radius: 1vw;
+  padding: 2vw;
+  color: main;
+  pointer-events: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 1vw;
+  box-shadow: -5px 5px 10px 1px #000000a0;
+}
+
+.configuratorRow {
+  width: 100%;
+}
+
+.configuratorRowHeader {
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.colorPicker {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.colorChoice {
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px #000000a0;
+  cursor: pointer;
+  border: 2px solid #000000;
+}
+
+// Choices
+.choice1 {
+  background-color: #5f22d9;
+}
+
+.choice2 {
+  background-color: #ffc1cc;
+}
+
+.choice3 {
+  background-color: #87ceeb;
+}
+
+.choice4 {
+  background-color: #bab86c;
+}
+
+.choice5 {
+  background-color: #fa5f55;
+}
+
+.choice6 {
+  background-color: #f0f0f0;
+}
+
+.choice7 {
+  background-color: #303030;
 }

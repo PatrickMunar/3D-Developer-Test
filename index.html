@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Title & Favicon -->
-    <title>Bio-Oil Philippines - Test Site</title>
+    <title>3D Developer Test</title>
 
     <!-- Custom Plain CSS -->
     <link rel="stylesheet" href="./styles/index.css" />
@@ -37,13 +37,88 @@
 
   <body>
     <!-- Loading Page -->
-    <div class="loadingPage"></div>
+    <div class="loadingPage">
+      <img src="./images/Logo.png" alt="logoImage" class="logoImage" />
+      <img
+        src="./images/LoadingImage.png"
+        alt="loadingImage"
+        class="loadingImage"
+      />
+    </div>
 
     <!-- Three.js Canvas -->
     <canvas class="webgl"></canvas>
 
-    <!-- Portfolio Body -->
-    <main class="mainBody"></main>
+    <!-- Back Section -->
+    <section class="backSection">
+      <div class="backgroundRow">
+        <t class="colorText">HYDRATE</t>
+      </div>
+      <div class="backgroundRow">
+        <t class="colorText">IN</t>
+        &nbsp;
+        <t class="colorText">STYLE</t>
+      </div>
+    </section>
+
+    <!-- Front Section -->
+    <section class="frontSection">
+      <section class="UISection">
+        <main class="configuratorUI">
+          <div class="configuratorRow">
+            <div class="configuratorRowHeader">CAP</div>
+            <div class="colorPicker">
+              <div class="colorChoice choice1 colorChoiceCap"></div>
+              <div class="colorChoice choice2 colorChoiceCap"></div>
+              <div class="colorChoice choice3 colorChoiceCap"></div>
+              <div class="colorChoice choice4 colorChoiceCap"></div>
+              <div class="colorChoice choice5 colorChoiceCap"></div>
+              <div class="colorChoice choice6 colorChoiceCap"></div>
+              <div class="colorChoice choice7 colorChoiceCap"></div>
+            </div>
+          </div>
+
+          <div class="configuratorRow">
+            <div class="configuratorRowHeader">BASE</div>
+            <div class="colorPicker">
+              <div class="colorChoice choice1 colorChoiceBase"></div>
+              <div class="colorChoice choice2 colorChoiceBase"></div>
+              <div class="colorChoice choice3 colorChoiceBase"></div>
+              <div class="colorChoice choice4 colorChoiceBase"></div>
+              <div class="colorChoice choice5 colorChoiceBase"></div>
+              <div class="colorChoice choice6 colorChoiceBase"></div>
+              <div class="colorChoice choice7 colorChoiceBase"></div>
+            </div>
+          </div>
+
+          <div class="configuratorRow">
+            <div class="configuratorRowHeader">SLEEVE</div>
+            <div class="colorPicker">
+              <div class="colorChoice choice1 colorChoiceSleeve"></div>
+              <div class="colorChoice choice2 colorChoiceSleeve"></div>
+              <div class="colorChoice choice3 colorChoiceSleeve"></div>
+              <div class="colorChoice choice4 colorChoiceSleeve"></div>
+              <div class="colorChoice choice5 colorChoiceSleeve"></div>
+              <div class="colorChoice choice6 colorChoiceSleeve"></div>
+              <div class="colorChoice choice7 colorChoiceSleeve"></div>
+            </div>
+          </div>
+
+          <div class="configuratorRow">
+            <div class="configuratorRowHeader">LOGO</div>
+            <div class="colorPicker">
+              <div class="colorChoice choice1 colorChoiceLogo"></div>
+              <div class="colorChoice choice2 colorChoiceLogo"></div>
+              <div class="colorChoice choice3 colorChoiceLogo"></div>
+              <div class="colorChoice choice4 colorChoiceLogo"></div>
+              <div class="colorChoice choice5 colorChoiceLogo"></div>
+              <div class="colorChoice choice6 colorChoiceLogo"></div>
+              <div class="colorChoice choice7 colorChoiceLogo"></div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </section>
 
     <!-- JavaScript -->
     <script type="module" src="./scripts/index.js"></script>

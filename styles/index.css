@@ -92,83 +92,26 @@ body {
 }
 
 /* Responsive */
-/* Max-Width 1080px */
-@media screen and (max-width: 1800px) {
-  html {
-    font-size: 8px;
-  }
-  /* Responsive Common */
-}
-@media screen and (max-width: 1800px) and (orientation: Portrait) {
-  /* Portrait */
-}
-@media screen and (max-width: 1800px) and (orientation: landscape) {
-  /* Landscape */
-}
-@media screen and (max-width: 1550px) {
-  html {
-    font-size: 7px;
-  }
-  /* Responsive Common */
-}
-@media screen and (max-width: 1550px) and (orientation: Portrait) {
-  /* Portrait */
-}
-@media screen and (max-width: 1550px) and (orientation: landscape) {
-  /* Landscape */
-}
-@media screen and (max-width: 1350px) {
-  html {
-    font-size: 6px;
-  }
-  /* Responsive Common */
-}
-@media screen and (max-width: 1350px) and (orientation: Portrait) {
-  /* Portrait */
-}
-@media screen and (max-width: 1350px) and (orientation: landscape) {
-  /* Landscape */
-}
 @media screen and (max-width: 1150px) {
-  html {
-    font-size: 5px;
-  }
   /* Responsive Common */
 }
 @media screen and (max-width: 1150px) and (orientation: Portrait) {
   /* Portrait */
+  .UISection {
+    justify-content: center !important;
+  }
+  main.configuratorUI {
+    width: 100vw !important;
+  }
+  .colorChoice {
+    width: 4vw !important;
+    height: 4vw !important;
+  }
+  .configuratorRowHeader {
+    font-size: 7vw !important;
+  }
 }
 @media screen and (max-width: 1150px) and (orientation: landscape) {
-  /* Landscape */
-}
-@media screen and (max-width: 950px) {
-  html {
-    font-size: 4px;
-  }
-  /* Responsive Common */
-}
-@media screen and (max-width: 950px) and (orientation: Portrait) {
-  /* Portrait */
-}
-@media screen and (max-width: 950px) and (orientation: landscape) {
-  /* Landscape */
-}
-@media screen and (max-width: 900px) {
-  /* Responsive Common */
-}
-@media screen and (max-width: 900px) and (orientation: Portrait) {
-  /* Portrait */
-}
-@media screen and (max-width: 900px) and (orientation: landscape) {
-  /* Landscape */
-}
-@media screen and (max-width: 700px) {
-  /* Responsive Common */
-}
-@media screen and (max-width: 700px) and (orientation: Portrait) {
-  /* Portrait */
-}
-@media screen and (max-width: 700px) and (orientation: landscape) {
   /* Landscape */
 }
 .backSection {

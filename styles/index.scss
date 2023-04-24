@@ -99,104 +99,25 @@ body {
 }
 
 /* Responsive */
-
-/* Max-Width 1080px */
-
-@media screen and (max-width: 1800px) {
-  html {
-    font-size: 8px;
-  }
-
-  @media (orientation: Portrait) {
-    /* Portrait */
-  }
-
-  @media (orientation: landscape) {
-    /* Landscape */
-  }
-
-  /* Responsive Common */
-}
-
-@media screen and (max-width: 1550px) {
-  html {
-    font-size: 7px;
-  }
-
-  @media (orientation: Portrait) {
-    /* Portrait */
-  }
-
-  @media (orientation: landscape) {
-    /* Landscape */
-  }
-
-  /* Responsive Common */
-}
-
-@media screen and (max-width: 1350px) {
-  html {
-    font-size: 6px;
-  }
-
-  @media (orientation: Portrait) {
-    /* Portrait */
-  }
-
-  @media (orientation: landscape) {
-    /* Landscape */
-  }
-
-  /* Responsive Common */
-}
-
 @media screen and (max-width: 1150px) {
-  html {
-    font-size: 5px;
-  }
-
   @media (orientation: Portrait) {
     /* Portrait */
-  }
+    .UISection {
+      justify-content: center !important;
+    }
 
-  @media (orientation: landscape) {
-    /* Landscape */
-  }
+    main.configuratorUI {
+      width: 100vw !important;
+    }
 
-  /* Responsive Common */
-}
+    .colorChoice {
+      width: 4vw !important;
+      height: 4vw !important;
+    }
 
-@media screen and (max-width: 950px) {
-  html {
-    font-size: 4px;
-  }
-
-  @media (orientation: Portrait) {
-    /* Portrait */
-  }
-
-  @media (orientation: landscape) {
-    /* Landscape */
-  }
-
-  /* Responsive Common */
-}
-
-@media screen and (max-width: 900px) {
-  @media (orientation: Portrait) {
-    /* Portrait */
-  }
-
-  @media (orientation: landscape) {
-    /* Landscape */
-  }
-
-  /* Responsive Common */
-}
-
-@media screen and (max-width: 700px) {
-  @media (orientation: Portrait) {
-    /* Portrait */
+    .configuratorRowHeader {
+      font-size: 7vw !important;
+    }
   }
 
   @media (orientation: landscape) {

@@ -129,6 +129,7 @@ const main = () => {
     obj.scene.children[0].material = new THREE.MeshStandardMaterial({
       color: new THREE.Color(0x5f22d9),
       roughness: 1,
+      transparent: true,
     })
   })
   bottle.add(cap)
@@ -141,6 +142,7 @@ const main = () => {
     obj.scene.children[0].material = new THREE.MeshStandardMaterial({
       color: new THREE.Color(0xf0f0f0),
       roughness: 0,
+      transparent: true,
     })
   })
   cap.add(hinge)
@@ -355,6 +357,7 @@ const main = () => {
   const colorChoiceLogos = document.querySelectorAll(".colorChoiceLogo")
   const colorTexts = document.querySelectorAll(".colorText")
 
+  // Cap
   for (let i = 0; i < colorChoiceCaps.length; i++) {
     if (i == choiceIndex[0]) {
       gsap.to(colorChoiceCaps[i], { duration: 0, scale: 1.3 })
@@ -389,6 +392,7 @@ const main = () => {
     })
   }
 
+  // Base
   for (let i = 0; i < colorChoiceBases.length; i++) {
     if (i == choiceIndex[1]) {
       gsap.to(colorChoiceBases[i], { duration: 0, scale: 1.3 })
@@ -427,6 +431,7 @@ const main = () => {
     })
   }
 
+  // Sleeve
   for (let i = 0; i < colorChoiceSleeves.length; i++) {
     if (i == choiceIndex[2]) {
       gsap.to(colorChoiceSleeves[i], { duration: 0, scale: 1.3 })
@@ -465,6 +470,7 @@ const main = () => {
     })
   }
 
+  // Logo
   for (let i = 0; i < colorChoiceLogos.length; i++) {
     if (i == choiceIndex[3]) {
       gsap.to(colorChoiceLogos[i], { duration: 0, scale: 1.3 })
@@ -503,6 +509,7 @@ const main = () => {
     })
   }
 
+  // Color Text
   for (let i = 0; i < colorTexts.length; i++) {
     if (i == 0) {
       gsap.to(colorTexts[i], {
@@ -527,6 +534,76 @@ const main = () => {
     }
   }
 
+  // Menu Button Events
+  let isMenuOn = false
+  const menuImages = document.querySelectorAll(".menuImage")
+  gsap.to(menuImages[1], { duration: 0, scale: 0 })
+
+  document.querySelector(".menuButton").addEventListener("click", () => {
+    if (isMenuOn == false) {
+      isMenuOn = true
+      gsap.to(menuImages[1], { duration: 0.1, scale: 1 })
+      gsap.to(menuImages[0], { duration: 0.1, scale: 0 })
+      gsap.to(".configuratorUI", {
+        duration: 0.1,
+        y: "1vw",
+        opacity: 0,
+      })
+    } else {
+      isMenuOn = false
+      gsap.to(menuImages[0], { duration: 0.1, scale: 1 })
+      gsap.to(menuImages[1], { duration: 0.1, scale: 0 })
+      gsap.to(".configuratorUI", {
+        duration: 0.1,
+        y: "0vw",
+        opacity: 1,
+      })
+    }
+  })
+
+  // Visibility Toggle Events
+  let isVisible = true
+
+  document
+    .querySelector(".visibiltyToggleDiv")
+    .addEventListener("click", () => {
+      if (isVisible == false) {
+        isVisible = true
+        gsap.to(cap.position, { duration: 0.5, y: 2 })
+        gsap.to(cap.rotation, { duration: 0.5, y: Math.PI * 2 })
+        gsap.to(cap.children[0].children[0].children[0].material, {
+          duration: 0.5,
+          opacity: 0,
+        })
+        gsap.to(cap.children[1].children[0].material, {
+          duration: 0.5,
+          opacity: 0,
+        })
+        gsap.to(".visibilityToggleImage", {
+          duration: 0.1,
+          opacity: 0.5,
+          scale: 0.6,
+        })
+      } else {
+        isVisible = false
+        gsap.to(cap.position, { duration: 0.5, y: 0 })
+        gsap.to(cap.rotation, { duration: 0.5, y: 0 })
+        gsap.to(cap.children[0].children[0].children[0].material, {
+          duration: 0.5,
+          opacity: 1,
+        })
+        gsap.to(cap.children[1].children[0].material, {
+          duration: 0.5,
+          opacity: 1,
+        })
+        gsap.to(".visibilityToggleImage", {
+          duration: 0.1,
+          opacity: 1,
+          scale: 0.8,
+        })
+      }
+    })
+
   /**
    * Animate
    */
@@ -545,34 +622,6 @@ const main = () => {
   }
 
   tick()
-
-  /**
-   * ScrollTriggers
-   */
-  // ----------------------------------------------------------------
-  const scrollTriggerJS = () => {
-    // // Camera
-    // gsap.fromTo(
-    //   camera.position,
-    //   { y: 0 },
-    //   {
-    //     scrollTrigger: {
-    //       trigger: ".heroSection",
-    //       start: () =>
-    //         document.querySelector(".heroSection").clientHeight * 0 + " top",
-    //       end: () => sizes.height * 5 + " top",
-    //       // toggleActions: "play none none reverse",
-    //       // snap: 1,
-    //       scrub: true,
-    //       // pin: true,
-    //       // markers: true
-    //     },
-    //     y: cameraMaxY,
-    //   }
-    // )
-  }
-
-  scrollTriggerJS()
 }
 
 /**
@@ -585,7 +634,7 @@ window.addEventListener("load", () => {
     rotationZ: "720deg",
     ease: "back",
   })
-  gsap.to(".loadingPage", { duration: 0, delay: 3, opacity: 0 })
+  gsap.to(".loadingPage", { duration: 0.5, delay: 3, opacity: 0 })
 
   main()
 })

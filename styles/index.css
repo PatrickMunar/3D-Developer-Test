@@ -110,6 +110,21 @@ body {
   .configuratorRowHeader {
     font-size: 7vw !important;
   }
+  .configuratorMenuRow {
+    font-size: 7vw !important;
+  }
+  .colorChoice {
+    width: 4vw !important;
+    height: 4vw !important;
+  }
+  .menuButtonDiv {
+    padding: 5vw !important;
+    justify-content: center !important;
+  }
+  .menuButton {
+    width: 10vw !important;
+    height: 10vw !important;
+  }
 }
 @media screen and (max-width: 1150px) and (orientation: landscape) {
   /* Landscape */
@@ -140,7 +155,7 @@ body {
   width: 100%;
   height: 50%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   font-size: 25vw;
   z-index: 10;
@@ -157,20 +172,66 @@ body {
   pointer-events: none;
 }
 
+.menuButtonDiv {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 2vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.menuButton {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuImage {
+  position: absolute;
+}
+
+.visibiltyToggleDiv {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.visibilityToggleImage {
+  transform: scale(0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .UISection {
   width: 100%;
   height: 100%;
   position: absolute;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-start;
-  padding: 3vw;
+  align-items: center;
+  padding: 2vw;
+}
+
+.configuratorMenuRow {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
 main.configuratorUI {
   width: 30vw;
-  background-color: #fdfdfd;
-  border-radius: 1vw;
+  border-radius: 1.5vw;
   padding: 2vw;
   color: main;
   pointer-events: auto;
@@ -179,7 +240,7 @@ main.configuratorUI {
   align-items: center;
   flex-direction: column;
   gap: 1vw;
-  box-shadow: -5px 5px 10px 1px rgba(0, 0, 0, 0.6274509804);
+  pointer-events: none;
 }
 
 .configuratorRow {
@@ -189,6 +250,10 @@ main.configuratorUI {
 .configuratorRowHeader {
   font-weight: bold;
   font-size: 2vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5vw;
 }
 
 .colorPicker {
@@ -202,9 +267,9 @@ main.configuratorUI {
   width: 2vw;
   height: 2vw;
   border-radius: 50%;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6274509804);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6274509804);
   cursor: pointer;
-  border: 2px solid #000000;
+  pointer-events: auto;
 }
 
 .choice1 {

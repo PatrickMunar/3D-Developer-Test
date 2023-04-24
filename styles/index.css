@@ -117,7 +117,7 @@ body {
     width: 4vw !important;
     height: 4vw !important;
   }
-  .menuButtonDiv {
+  .menuSection {
     padding: 5vw !important;
     justify-content: center !important;
   }
@@ -172,7 +172,7 @@ body {
   pointer-events: none;
 }
 
-.menuButtonDiv {
+.menuSection {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -180,6 +180,8 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  z-index: 2000;
+  pointer-events: none;
 }
 
 .menuButton {
@@ -191,6 +193,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: auto;
 }
 
 .menuImage {

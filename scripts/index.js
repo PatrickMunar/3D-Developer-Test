@@ -546,9 +546,10 @@ const main = () => {
       gsap.to(menuImages[0], { duration: 0.1, scale: 0 })
       gsap.to(".configuratorUI", {
         duration: 0.1,
-        y: "1vw",
+        y: "5vw",
         opacity: 0,
       })
+      gsap.to(".webgl", { duration: 0, zIndex: 1000 })
     } else {
       isMenuOn = false
       gsap.to(menuImages[0], { duration: 0.1, scale: 1 })
@@ -558,6 +559,7 @@ const main = () => {
         y: "0vw",
         opacity: 1,
       })
+      gsap.to(".webgl", { duration: 0, zIndex: 10 })
     }
   })
 
@@ -567,8 +569,8 @@ const main = () => {
   document
     .querySelector(".visibiltyToggleDiv")
     .addEventListener("click", () => {
-      if (isVisible == false) {
-        isVisible = true
+      if (isVisible == true) {
+        isVisible = false
         gsap.to(cap.position, { duration: 0.5, y: 2 })
         gsap.to(cap.rotation, { duration: 0.5, y: Math.PI * 2 })
         gsap.to(cap.children[0].children[0].children[0].material, {
@@ -585,7 +587,7 @@ const main = () => {
           scale: 0.6,
         })
       } else {
-        isVisible = false
+        isVisible = true
         gsap.to(cap.position, { duration: 0.5, y: 0 })
         gsap.to(cap.rotation, { duration: 0.5, y: 0 })
         gsap.to(cap.children[0].children[0].children[0].material, {

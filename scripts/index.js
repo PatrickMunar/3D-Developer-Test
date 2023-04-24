@@ -318,16 +318,32 @@ const main = () => {
   const changeColor = (index, color) => {
     if (index == 0) {
       cap.children[1].children[0].material.color = colors[color]
+      gsap.to(colorTexts[1], {
+        duration: 0.1,
+        color: domColors[choiceIndex[0]],
+      })
     }
     if (index == 1) {
       cap.children[0].children[0].children[0].material.color = colors[color]
       base.children[0].children[0].material.color = colors[color]
+      gsap.to(colorTexts[0], {
+        duration: 0.1,
+        backgroundColor: domColors[choiceIndex[1]],
+      })
     }
     if (index == 2) {
       sleeve.children[0].children[0].material.color = colors[color]
+      gsap.to(colorTexts[3], {
+        duration: 0.1,
+        color: domColors[choiceIndex[2]],
+      })
     }
     if (index == 3) {
       logoPlane.material.uniforms.uColor.value = colors[color]
+      gsap.to(colorTexts[2], {
+        duration: 0.1,
+        color: domColors[choiceIndex[3]],
+      })
     }
   }
 

@@ -217,9 +217,16 @@ body {
   align-items: flex-start;
   flex-direction: column;
   pointer-events: none;
-  padding: 2vw;
   color: #5f22d9;
   overflow: hidden;
+  padding: 2vw;
+}
+
+.backgroundDiv {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  filter: brightness(1.1);
 }
 
 .backgroundRow {
@@ -229,6 +236,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   font-size: 25vw;
+  z-index: 10;
 }
 
 // Front Section

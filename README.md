@@ -1,7 +1,6 @@
 # 3D Bottle Configurator
 
-A Simple 3D Bottle Configurator made with Three.js
-3D Developer Test
+A Simple 3D Bottle Configurator made with Three.js | 3D Developer Test
 
 Notes:
 
